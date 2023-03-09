@@ -1,8 +1,10 @@
 config:
   target: "http://localhost:5180"
+  #target: "https://com-falha.azurewebsites.net"
+  #target: "https://sem-falha.azurewebsites.net"
   phases:
-    - duration: 10
-      arrivalRate: 10
+    - duration: 40
+      arrivalRate: 30
 scenarios:
   - flow:
       - post:
