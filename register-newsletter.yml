@@ -1,0 +1,12 @@
+config:
+  target: "http://localhost:5180"
+  phases:
+    - duration: 10
+      arrivalRate: 10
+scenarios:
+  - flow:
+      - post:
+          url: "/Newsletter"
+          json:
+            Name: "Cristiano"
+            Email: "00-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0A-0.AA"
