@@ -16,7 +16,8 @@ public class NewsletterController : ControllerBase
 
     private static bool EmailAddressIsValid(string emailAddress)
     {
-        const string emailAddressPattern = @"^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@(([0-9a-zA-Z])+([-\w]*[0-9a-zA-Z])*\.)+[azA-Z]{2,9})$";
+        const string emailAddressPattern = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
+        //const string emailAddressPattern = @"^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@(([0-9a-zA-Z])+([-\w]*[0-9a-zA-Z])*\.)+[azA-Z]{2,9})$";
         return Regex.IsMatch(emailAddress, emailAddressPattern, RegexOptions.None, TimeSpan.FromSeconds(10));
         //return Regex.IsMatch(emailAddress, emailAddressPattern);
     }
